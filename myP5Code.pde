@@ -5,50 +5,54 @@ setup = function() {
     
    
     
-    drawFish(200, 200, color(200,0,200)); 
-    drawFish(300, 200, color(0,200,200));
-    
-    drawjellyfish();
+   
+    drawjellyfish(140, 150);
+    drawjellyfish(90, 250)
   
-  drawjelly ();
+  drawBubble();
 };
 
 
 //🟢draw Function - will run on repeat
 draw = function(){
 
-};
 
-var drawjellyfish = function() {
-fill(181, 33, 241);
-textSize(70);
-text("ଳ", 80,80);
 };
 
 
 //🟢mouseClicked Function - will run when mouse is clicked
-mouseClicked = function(){};
+mouseClicked = function(){
+
+noStroke();
+fill(355,355,355);
+ellipse(mouseX, mouseY, 12,12);
+
+};
+
 
 
 
 
 //🟡drawFish Function - will run when called
-var drawFish = function(fishX, fishY, fishColor){
-  textSize(80);
-  fill(fishColor);
-  text("𓆝", fishX, fishY);
-  nostroke();
-  ellipse(105,45,33,28);
+
+
+
+var drawjellyfish = function(jellyfishX, jellyfishY){
+textSize(80);
+noStroke();
+fill(150, 24, 184 );
+text("ଳ", jellyfishX, jellyfishY);
+ellipse(jellyfishX+28, jellyfishY - 40, 45,32);
+fill(210, 131, 232 );
+stroke(150, 72, 171 );
+ellipse(jellyfishX+26, jellyfishY-48,12,17);
+ellipse(jellyfishX+15, jellyfishY-48,12,17)
 };
 
- var drawjelly = function() {
- fill(255,255,255);
-    stroke(255,255,255)
-    ellipse(200, 200, 50, 40); // jellyfish body
-     ellipse(185, 210, 20, 30); 
-     ellipse(200, 210, 20, 30); 
-     ellipse(215, 210, 20, 30); 
-     };
+
+
+
+
 
 
 
