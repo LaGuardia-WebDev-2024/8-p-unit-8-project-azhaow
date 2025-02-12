@@ -13,25 +13,33 @@ setup = function() {
    drawopposite(80,450)
    
     drawjellyfish(140, 150);
-    drawjellyfish(90, 250)
+    drawjellyfish(90, 250);
+    drawjellyfish(200,200);
+    
+  drawfish();
+  drawfish();
+  drawfish();
+  drawfish();
+  drawfish();
   
   drawBubble();
   
-  drawfish();
-  drawfish();
+
+
+
+ 
 };
 
 
 //🟢draw Function - will run on repeat
 draw = function(){
 
-}
+};
 
-var drawfish = function(){
-textSize(80);
-fill(243, 144, 57);
-text("𓆝 ", random(0,500), random(0,500));
-}
+
+
+
+
 
 
 //🟢mouseClicked Function - will run when mouse is clicked
@@ -61,9 +69,8 @@ fill(150, 24, 184 );
 text("ଳ", jellyfishX, jellyfishY);
 ellipse(jellyfishX+28, jellyfishY - 40, 45,32);
 fill(210, 131, 232 );
-stroke(150, 72, 171 );
-ellipse(jellyfishX+26, jellyfishY-48,12,17);
-ellipse(jellyfishX+15, jellyfishY-48,12,17)
+
+
 }
 
 var drawSeaweed = function(seaweedX,seaweedY){
@@ -81,7 +88,14 @@ fill(37, 178, 67);
 text("(", oppositeX, oppositeY);
 }
 
-
+var drawfish = function(fishX, fishY){
+var fishX= random(10,300);
+var fishY = random(20,300);
+textSize(80);
+noStroke();
+fill(random(0,255));
+text("𓆝", fishX, fishY);
+}
 
 
 
